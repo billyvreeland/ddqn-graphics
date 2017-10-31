@@ -43,13 +43,15 @@ ProcessResultsFolder <- function(folder_name) {
 ### Main -----------------------------------------------------------------------
 
 # Intake resaults data and run processing function, which merges meta data with 
-# test results
-results_folders <- list.files('./test_results/', 
-                              include.dirs = TRUE, full.names = TRUE)
+# test results, done locally to generate processed_results_list.rds
 
-results <- results_folders %>%
-  lapply(ProcessResultsFolder)
-
+# results_folders <- list.files('./test_results/',
+#                               include.dirs = TRUE, full.names = TRUE)
+# results <- results_folders %>%
+#   lapply(ProcessResultsFolder)
+# 
+# saveRDS(results, 'processed_results_list.rds')
+results <- readRDS('processed_results_list.rds')
 head(results[[1]])
 
 # Get last entry from each set of results and generate summary
