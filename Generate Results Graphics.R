@@ -2,6 +2,7 @@
 #'  Results data manipulation and graphics generation associated with writeup
 #'  found here:
 #'  
+#' https://www.billyvreeland.com/portfolio/2017/10/13/solving-openai-gym-nm4yz
 #'  
 #'
 
@@ -12,9 +13,6 @@ library(RColorBrewer)
 library(scales)
 library(grid)
 library(gridExtra)
-
-### Setup ----------------------------------------------------------------------
-setwd('C:/Users/billy.vreeland/openai_test_results/10_6_17/')
 
 ### Functions ------------------------------------------------------------------
 ProcessResultsFolder <- function(folder_name) {
